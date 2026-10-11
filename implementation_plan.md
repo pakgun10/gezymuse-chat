@@ -1,1 +1,529 @@
-IyBJbXBsZW1lbnRhdGlvbiBQbGFuIOKAlCBHZXp5Q2hhdAoKQXBsaWthc2kgcGVyY2FrYXBhbiByZWFsLXRpbWUgYWxhIFdoYXRzQXBwL1RlbGVncmFtIHVudHVrIGxpbmdrdW5nYW4gc2Vrb2xhaAooZ3VydSwgVFUsIHdhbGkga2VsYXMsIE1HTVApLiBEb2t1bWVuIGluaSBhZGFsYWggcmVuY2FuYSBsZW5na2FwIGRhcmkgbm9sCnNhbXBhaSBNVlAuCgoqKlN0YWNrIHlhbmcgZGl0ZXRhcGthbjoqKiBCdW4gKyBIb25vICsgV2ViU29ja2V0IG5hdGl2ZSArIE1hcmlhREIgKyBSZWRpcy4KKipVSToqKiBgaW5kZXguaHRtbGAgKHByb3RvdGlwZSB5YW5nIHN1ZGFoIGFkYSDigJQgdGFtcGlsYW4gZmluYWwsIHRpbmdnYWwKZGlzYW1idW5na2FuIGtlIGJhY2tlbmQpLgoKLS0tCgojIyAxLiBWaXNpICYgVGFyZ2V0IE1WUAoKKipWaXNpOioqIHNhdHUgYXBsaWthc2kgY2hhdCBtaWxpayBzZW5kaXJpIOKAlCBkYXRhIGRpIHNlcnZlciBzZW5kaXJpIChWUFMpLAp0YW5wYSBrZXRlcmdhbnR1bmdhbiBrZSBwbGF0Zm9ybSBhc2luZywgY3VrdXAgdW50dWsga2VidXR1aGFuIGtvbXVuaWthc2kKc2Vrb2xhaC4KCioqVGFyZ2V0IE1WUCAoc2VsZXNhaSA9IEJhZ2lhbiAxMCB0ZXJwZW51aGkpOioqCgotIExvZ2luIGRlbmdhbiBub21vciBIUCArIGtvZGUgT1RQIChhbGEgV2hhdHNBcHApLgotIENoYXQgMS1vbi0xIGRhbiBncnVwIGtlY2lsIChtYWtzIH41MCBhbmdnb3RhKS4KLSBQZXNhbiB0ZWtzLCBnYW1iYXIsIGRva3VtZW4sIHZvaWNlIG5vdGUuCi0gU3RhdHVzIHBlc2FuOiB0ZXJraXJpbSAo4pyTKSDihpIgZGl0ZXJpbWEgKOKck+Kckykg4oaSIGRpYmFjYSAo4pyT4pyTIGJpcnUpLgotIEluZGlrYXRvciAibWVuZ2V0aWsuLi4iIGRhbiBzdGF0dXMgb25saW5lLgotIFJpd2F5YXQgcGVzYW4gZGVuZ2FuIHBhZ2luYXRpb24gKCJtdWF0IHBlc2FuIGxhbWEiKS4KLSBQdXNoIG5vdGlmaWNhdGlvbiBzYWF0IGFwbGlrYXNpIGRpLWJhY2tncm91bmQgKEZDTSkuCi0gQW50cmlhbiBvZmZsaW5lOiBwZXNhbiB0ZXJraXJpbSBvdG9tYXRpcyBzYWF0IHNpbnlhbCBrZW1iYWxpLgotIEJlcmphbGFuIGRpIEhQIHZpYSBQV0EgZGFuL2F0YXUgQVBLIGJ1bmdrdXMgV2ViVmlldyAocG9sYSBCaW1hc29mdCkuCgoqKkJ1a2FuIHRhcmdldCBNVlAgKGRpdHVuZGEg4oCUIEJhZ2lhbiAxMik6KiogZW5rcmlwc2kgZW5kLXRvLWVuZCwgcGFuZ2dpbGFuCnN1YXJhL3ZpZGVvLCBjaGFubmVsL2Jyb2FkY2FzdCBiZXNhciwgc2lua3JvbiBtdWx0aS1kZXZpY2UgcGVudWguCgotLS0KCiMjIDIuIEFyc2l0ZWt0dXIKCmBgYArilIzilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilJAgICAgICBIVFRQUyAvIFdTUyAgICAgIOKUjOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUkArilIIgIFBXQSAvIEFQSyBXZWJWaWV3ICDilIIg4peE4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pa6IOKUgiAgbmdpbnggIOKUggrilIIgIChpbmRleC5odG1sICsgSlMpICDilIIgICAgICAgICAgICAgICAgICAgICAgIOKUgiAgKFRMUykgIOKUggrilJTilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilJggICAgICAgICAgICAgICAgICAgICAgIOKUlOKUgOKUgOKUgOKUgOKUrOKUgOKUgOKUgOKUgOKUmAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilIIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilIzilIDilIDilIDilIDilIDilIDilrzilIDilIDilIDilIDilIDilIDilJAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilIIgQnVuICsgSG9ubyAg4pSCCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSCICDigKIgUkVTVCBBUEkg4pSCCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSCICDigKIgV1MgL3dzICAg4pSCCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSU4pSA4pSs4pSA4pSs4pSA4pSs4pSA4pSs4pSA4pSA4pSA4pSA4pSA4pSYCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilIIg4pSCIOKUgiDilJTilIDilrogU3RvcmFnZSBtZWRpYQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSCIOKUgiDilIIgICAgIChkaXNrIFZQUyAvIFIyKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSCIOKUgiDilJTilIDilrogUmVkaXMKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOKUgiDilIIgICAgIChwdWIvc3ViLCBwcmVzZW5jZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOKUgiDilIIgICAgICByYXRlLWxpbWl0LCBPVFApCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilIIg4pSU4pSA4pa6IE1hcmlhREIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOKUgiAgICAgKHVzZXJzLCBwZXJjYWthcGFuLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSCICAgICAgcGVzYW4pCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDilJTilIDilrogRkNNIChwdXNoIG5vdGlmaWNhdGlvbikKYGBgCgotIFNhdHUgYmluYXJ5IEJ1biBtZWxheWFuaSBSRVNUICsgV2ViU29ja2V0IHNla2FsaWd1cy4KLSBTY2FsZS1vdXQgbmFudGk6IHRhbWJhaCBpbnN0YW5jZSBCdW4gZGkgYmVsYWthbmcgbmdpbngsIGZhbi1vdXQgcGVzYW4KICBhbnRhci1pbnN0YW5jZSBsZXdhdCBSZWRpcyBwdWIvc3ViLiBLb2RlIGRpdHVsaXMgc2lhcCB1bnR1ayBpdHUgc2VqYWsgYXdhbAogIChiYWdpYW4gOCksIHN1cGF5YSBzY2FsZS1vdXQgdGlkYWsgYnV0dWggcmVmYWN0b3IuCgotLS0KCiMjIDMuIFN0YWNrIERldGFpbAoKfCBMYXBpc2FuICAgICAgfCBQaWxpaGFuIHwgQ2F0YXRhbiB8CnwtLS0tLS0tLS0tLS0tLXwtLS0tLS0tLS18LS0tLS0tLS0tfAp8IFJ1bnRpbWUgICAgICB8ICoqQnVuKiogfCBTdWRhaCBkaWt1YXNhaTsgV2ViU29ja2V0IG5hdGl2ZSBjZXBhdCB8CnwgRnJhbWV3b3JrICAgIHwgKipIb25vKiogfCBSb3V0ZXIgUkVTVDsgamFsYW4gZGkgYXRhcyBgQnVuLnNlcnZlYCB8CnwgUmVhbHRpbWUgICAgIHwgKipXZWJTb2NrZXQgbmF0aXZlIEJ1bioqIChgQnVuLnNlcnZlKHsgd2Vic29ja2V0IH0pYCkgfCBFbmRwb2ludCBgL3dzYDsgSG9ubyB1bnR1ayB1cGdyYWRlIGhhbmRzaGFrZSB8CnwgRGF0YWJhc2UgICAgIHwgKipNYXJpYURCIDEwLjExKyoqIHwgRHJpdmVyIGBteXNxbDIvcHJvbWlzZWAgYXRhdSBEcml6emxlIE9STSB8CnwgQ2FjaGUvYnVzICAgIHwgKipSZWRpcyA3KiogfCBQdWIvc3ViLCBwcmVzZW5jZSwgcmF0ZS1saW1pdCwgcGVueWltcGFuYW4gT1RQIHwKfCBGcm9udGVuZCAgICAgfCBgaW5kZXguaHRtbGAgcHJvdG90aXBlICh2YW5pbGxhIEpTKSB8IE5hbnRpOiBUYWlsd2luZDsgdGV0YXAgc2F0dSBmaWxlIHwKfCBQV0EgICAgICAgICAgfCBtYW5pZmVzdCArIHNlcnZpY2Ugd29ya2VyIHwgRmFzZSA0IChpbnN0YWxhc2kgKyBhbnRyaWFuIG9mZmxpbmUpIHwKfCBBbmRyb2lkICAgICAgfCBBUEsgYnVuZ2t1cyBXZWJWaWV3IHwgUG9sYSBCaW1hc29mdCB5YW5nIHN1ZGFoIHBlcm5haCBkaWJ1YXQgfAp8IFB1c2ggICAgICAgICB8IEZpcmViYXNlIENsb3VkIE1lc3NhZ2luZyAoRkNNKSB8IFdhamliOiBXUyBtYXRpIHNhYXQgYXBwIGRpLWJhY2tncm91bmQgfAp8IE1lZGlhICAgICAgICB8IERpc2sgVlBTIHZpYSBuZ2lueCAoYFgtQWNjZWwtUmVkaXJlY3RgKSB8IEFsdGVybmF0aWY6IENsb3VkZmxhcmUgUjIgKFMzLWNvbXBhdGlibGUpIHwKfCBBdXRoICAgICAgICAgfCBPVFAgdmlhIFNNUy9XQSBnYXRld2F5IOKGkiBKV1QgKEhTMjU2KSB8IEpXVCBwZW5kZWsgKDE1IG1udCkgKyByZWZyZXNoIHRva2VuIHwKfCBEZXBsb3kgICAgICAgfCBWUFMsIHN5c3RlbWQgKyBuZ2lueCArIGNlcnRib3QgfCBQb2xhIHlhbmcgc2FtYSBkZW5nYW4gR2V6eUZvcm0gfAoKKipLZXB1dHVzYW4gc2FkYXI6KiogdGlkYWsgbWVtYWthaSBTb2NrZXQuSU8gKGJ1dHVoIGtvbXBhdGliaWxpdGFzCmZhbGxiYWNrIHBvbGxpbmcg4oCUIHRpZGFrIHBlcmx1KSwgdGlkYWsgbWVtYWthaSBwcm90b2tvbCBiaW5lciBjdXN0b20KKE1UUHJvdG8gZHNiLiDigJQga2VsYXMgcmFrc2FzYSwgSlNPTiBjdWt1cCkuCgotLS0KCiMjIDQuIFNrZW1hIERhdGFiYXNlIChNYXJpYURCKQoKYGBgc3FsCkNSRUFURSBUQUJMRSB1c2VycyAoCiAgaWQgICAgICAgICAgICBCSUdJTlQgVU5TSUdORUQgQVVUT19JTkNSRU1FTlQgUFJJTUFSWSBLRVksCiAgcGhvbmUgICAgICAgICBWQVJDSEFSKDIwKSAgTk9UIE5VTEwgVU5JUVVFLCAgICAgIC0tICs2MjgxMnh4eHgsIGZvcm1hdCBFLjE2NAogIG5hbWUgICAgICAgICAgVkFSQ0hBUigxMDApIE5PVCBOVUxMLAogIGF2YXRhcl91cmwgICAgVkFSQ0hBUigyNTUpIE5VTEwsCiAgY3JlYXRlZF9hdCAgICBUSU1FU1RBTVAgREVGQVVMVCBDVVJSRU5UX1RJTUVTVEFNUCwKICBJTkRFWCBpZHhfcGhvbmUgKHBob25lKQopOwoKQ1JFQVRFIFRBQkxFIGNvbnZlcnNhdGlvbnMgKAogIGlkICAgICAgICAgQklHSU5UIFVOU0lHTkVEIEFVVE9fSU5DUkVNRU5UIFBSSU1BUlkgS0VZLAogIHR5cGUgICAgICAgRU5VTSgnZGlyZWN0JywnZ3JvdXAnKSBOT1QgTlVMTCwKICB0aXRsZSAgICAgIFZBUkNIQVIoMTIwKSBOVUxMLCAgICAgICAgICAgICAgICAgICAgLS0gbmFtYSBncnVwOyBOVUxMIHV0ayBkaXJlY3QKICBjcmVhdGVkX2J5IEJJR0lOVCBVTlNJR05FRCBOVUxMLAogIGNyZWF0ZWRfYXQgVElNRVNUQU1QIERFRkFVTFQgQ1VSUkVOVF9USU1FU1RBTVAsCiAgRk9SRUlHTiBLRVkgKGNyZWF0ZWRfYnkpIFJFRkVSRU5DRVMgdXNlcnMoaWQpCik7CgpDUkVBVEUgVEFCTEUgY29udmVyc2F0aW9uX21lbWJlcnMgKAogIGNvbnZlcnNhdGlvbl9pZCAgIEJJR0lOVCBVTlNJR05FRCBOT1QgTlVMTCwKICB1c2VyX2lkICAgICAgICAgICBCSUdJTlQgVU5TSUdORUQgTk9UIE5VTEwsCiAgcm9sZSAgICAgICAgICAgICAgRU5VTSgnYWRtaW4nLCdtZW1iZXInKSBERUZBVUxUICdtZW1iZXInLAogIGxhc3RfcmVhZF9tc2dfaWQgIEJJR0lOVCBVTlNJR05FRCBOVUxMLCAgICAgICAgICAtLSB1bnR1ayBiYWRnZSAmICJkaWJhY2EiCiAgam9pbmVkX2F0ICAgICAgICAgVElNRVNUQU1QIERFRkFVTFQgQ1VSUkVOVF9USU1FU1RBTVAsCiAgUFJJTUFSWSBLRVkgKGNvbnZlcnNhdGlvbl9pZCwgdXNlcl9pZCksCiAgRk9SRUlHTiBLRVkgKGNvbnZlcnNhdGlvbl9pZCkgUkVGRVJFTkNFUyBjb252ZXJzYXRpb25zKGlkKSBPTiBERUxFVEUgQ0FTQ0FERSwKICBGT1JFSUdOIEtFWSAodXNlcl9pZCkgUkVGRVJFTkNFUyB1c2VycyhpZCkgT04gREVMRVRFIENBU0NBREUKKTsKCkNSRUFURSBUQUJMRSBtZXNzYWdlcyAoCiAgaWQgICAgICAgICAgICAgIEJJR0lOVCBVTlNJR05FRCBBVVRPX0lOQ1JFTUVOVCBQUklNQVJZIEtFWSwKICBjb252ZXJzYXRpb25faWQgQklHSU5UIFVOU0lHTkVEIE5PVCBOVUxMLAogIHNlbmRlcl9pZCAgICAgICBCSUdJTlQgVU5TSUdORUQgTk9UIE5VTEwsCiAga2luZCAgICAgICAgICAgIEVOVU0oJ3RleHQnLCdpbWFnZScsJ2ZpbGUnLCdhdWRpbycpIE5PVCBOVUxMLAogIGJvZHlfdGV4dCAgICAgICBURVhUIE5VTEwsICAgICAgICAgICAgICAgICAgICAgICAgLS0gdGVrcyAvIGNhcHRpb24KICBtZWRpYV91cmwgICAgICAgVkFSQ0hBUigyNTUpIE5VTEwsCiAgbWVkaWFfbWltZSAgICAgIFZBUkNIQVIoMTAwKSBOVUxMLAogIG1lZGlhX3NpemUgICAgICBJTlQgVU5TSUdORUQgTlVMTCwKICByZXBseV90b19pZCAgICAgQklHSU5UIFVOU0lHTkVEIE5VTEwsCiAgY3JlYXRlZF9hdCAgICAgIFRJTUVTVEFNUCgzKSBERUZBVUxUIENVUlJFTlRfVElNRVNUQU1QKDMpLAogIEZPUkVJR04gS0VZIChjb252ZXJzYXRpb25faWQpIFJFRkVSRU5DRVMgY29udmVyc2F0aW9ucyhpZCkgT04gREVMRVRFIENBU0NBREUsCiAgRk9SRUlHTiBLRVkgKHNlbmRlcl9pZCkgUkVGRVJFTkNFUyB1c2VycyhpZCksCiAgRk9SRUlHTiBLRVkgKHJlcGx5X3RvX2lkKSBSRUZFUkVOQ0VTIG1lc3NhZ2VzKGlkKSBPTiBERUxFVEUgU0VUIE5VTEwsCiAgSU5ERVggaWR4X2NvbnZfdGltZSAoY29udmVyc2F0aW9uX2lkLCBpZCkgICAgICAgIC0tIHBhZ2luYXRpb24gY2VwYXQKKTsKCkNSRUFURSBUQUJMRSBkZXZpY2VzICggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAtLSB1bnR1ayBwdXNoCiAgdXNlcl9pZCAgICBCSUdJTlQgVU5TSUdORUQgTk9UIE5VTEwsCiAgZmNtX3Rva2VuICBWQVJDSEFSKDI1NSkgTk9UIE5VTEwsCiAgcGxhdGZvcm0gICBFTlVNKCdhbmRyb2lkJywnd2ViJykgTk9UIE5VTEwsCiAgdXBkYXRlZF9hdCBUSU1FU1RBTVAgREVGQVVMVCBDVVJSRU5UX1RJTUVTVEFNUCBPTiBVUERBVEUgQ1VSUkVOVF9USU1FU1RBTVAsCiAgUFJJTUFSWSBLRVkgKHVzZXJfaWQsIGZjbV90b2tlbiksCiAgRk9SRUlHTiBLRVkgKHVzZXJfaWQpIFJFRkVSRU5DRVMgdXNlcnMoaWQpIE9OIERFTEVURSBDQVNDQURFCik7CmBgYAoKT1RQICoqdGlkYWsqKiBkaXNpbXBhbiBkaSBNYXJpYURCIOKAlCBjdWt1cCBkaSBSZWRpcyBkZW5nYW4gVFRMIDUgbWVuaXQKKGJhZ2lhbiA4KS4gU2VzaSBsb2dpbiA9IEpXVCBzdGF0ZWxlc3MsIHRpZGFrIHBlcmx1IHRhYmVsIHNlc3Npb25zLgoKLS0tCgojIyA1LiBQcm90b2tvbCBXZWJTb2NrZXQgKEpTT04pCgpTYXR1IGtvbmVrc2kgcGVyIHBlcmFuZ2thdCBrZSBgd3NzOi8vPGhvc3Q+L3dzYC4gRW52ZWxvcGUgc2VsYWx1OgoKYGBganNvbmMKeyAidCI6ICI8ZXZlbnQ+IiwgImQiOiB7IC8qIHBheWxvYWQgKi8gfSwgInJlcUlkIjogInV1aWQtb3BzaW9uYWwiIH0KYGBgCgoqKkNsaWVudCDihpIgU2VydmVyKioKCnwgRXZlbnQgfCBQYXlsb2FkIHwgRnVuZ3NpIHwKfC0tLS0tLS18LS0tLS0tLS0tfC0tLS0tLS0tfAp8IGBhdXRoYCB8IGB7ICJ0b2tlbiI6ICI8SldUPiIgfWAgfCBXYWppYiBwZXJ0YW1hOyB0YW5wYSBpbmkga29uZWtzaSBkaXR1dHVwIHwKfCBgbXNnLnNlbmRgIHwgYHsgImNvbnZJZCI6IDEyLCAia2luZCI6ICJ0ZXh0IiwgImJvZHkiOiAiaGFsbyIsICJyZXBseVRvIjogbnVsbCwgInJlcUlkIjogImFiYyIgfWAgfCBLaXJpbSBwZXNhbjsgYHJlcUlkYCB1bnR1ayBhY2sgfAp8IGBtc2cucmVhZGAgfCBgeyAiY29udklkIjogMTIsICJsYXN0TXNnSWQiOiAzNDUgfWAgfCBUYW5kYWkgZGliYWNhIOKGkiB1cGRhdGUgYGxhc3RfcmVhZF9tc2dfaWRgIHwKfCBgdHlwaW5nYCB8IGB7ICJjb252SWQiOiAxMiwgInN0YXRlIjogdHJ1ZSB9YCB8IE11bGFpL2JlcmhlbnRpIG1lbmdldGlrIHwKfCBgcGluZ2AgfCBge31gIHwgSGVhcnRiZWF0IHRpYXAgMzAgZHRrIChqYXdhYmFuIGBwb25nYCkgfAoKKipTZXJ2ZXIg4oaSIENsaWVudCoqCgp8IEV2ZW50IHwgUGF5bG9hZCB8IEZ1bmdzaSB8CnwtLS0tLS0tfC0tLS0tLS0tLXwtLS0tLS0tLXwKfCBgbXNnLm5ld2AgfCBgeyAibXNnIjogeyBpZCwgY29udklkLCBzZW5kZXJJZCwga2luZCwgYm9keSwgbWVkaWFVcmwsIGNyZWF0ZWRBdCB9IH1gIHwgUGVzYW4gbWFzdWsg4oaSIHJlbmRlciBidWJibGUgfAp8IGBtc2cuYWNrYCB8IGB7ICJyZXFJZCI6ICJhYmMiLCAibXNnSWQiOiAzNDYsICJzdGF0dXMiOiAic2VudCIgfWAgfCBPcHRpbWlzdGljIFVJOiDinJMgc2F0dSB8CnwgYG1zZy5zdGF0dXNgIHwgYHsgIm1zZ0lkIjogMzQ2LCAiY29udklkIjogMTIsICJzdGF0dXMiOiAiZGVsaXZlcmVkIi8icmVhZCIsICJieVVzZXJJZCI6IDcgfWAgfCDinJPinJMgLyDinJPinJMgYmlydSB8CnwgYHR5cGluZ2AgfCBgeyAiY29udklkIjogMTIsICJ1c2VySWQiOiA3LCAibmFtZSI6ICJCdSBTYXJpIiwgInN0YXRlIjogdHJ1ZSB9YCB8IEluZGlrYXRvciBtZW5nZXRpayB8CnwgYHByZXNlbmNlYCB8IGB7ICJ1c2VySWQiOiA3LCAib25saW5lIjogdHJ1ZSB9YCB8IFN0YXR1cyBvbmxpbmUvb2ZmbGluZSB8CnwgYHBvbmdgIHwgYHt9YCB8IEphd2FiYW4gaGVhcnRiZWF0IHwKCioqQXR1cmFuIHBlbnRpbmc6KioKCi0gU2VydmVyIHNlbGFsdSBzaW1wYW4ga2UgTWFyaWFEQiAqKmR1bHUqKiwgYmFydSBmYW4tb3V0LiBUaWRhayBhZGEgcGVzYW4KICB5YW5nICJoYW55YSBkaSBtZW1vcmkiLgotIGBkZWxpdmVyZWRgID0gcGVzYW4gc3VkYWggc2FtcGFpIGtlIFdTIHBlbmVyaW1hIHlhbmcgb25saW5lLiBKaWthIHBlbmVyaW1hCiAgb2ZmbGluZSDihpIgdGV0YXAgYHNlbnRgLCBkYW4gc2FhdCBpYSBtZW1idWthIGFwbGlrYXNpLCBraXJpbSBwdXNoIEZDTSArCiAgcGVzYW4gZGlhbnRhciBzYWF0IGlhIGBtc2cucmVhZGAvc2lua3JvbmlzYXNpIHJpd2F5YXQuCi0gUmVjb25uZWN0OiBjbGllbnQga2lyaW0gYGxhc3RNc2dJZGAgcGVyIHBlcmNha2FwYW4g4oaSIHNlcnZlciBraXJpbSBwZXNhbgogIHlhbmcgdGVybGV3YXQgKGFudGkgcGVzYW4gaGlsYW5nIHNhYXQgc2lueWFsIHB1dHVzLXB1dHVzKS4KCi0tLQoKIyMgNi4gUkVTVCBBUEkgKEhvbm8pCgpTZW11YSBkaSBiYXdhaCBgL2FwaWAsIGF1dGggdmlhIGBBdXRob3JpemF0aW9uOiBCZWFyZXIgPEpXVD5gCihrZWN1YWxpIGR1YSBlbmRwb2ludCBPVFAgcGVydGFtYSkuCgpgYGAKUE9TVCAvYXBpL2F1dGgvb3RwL3JlcXVlc3QgICB7IHBob25lIH0gICAgICAgICAgICDihpIgeyBvaywgcmV0cnlBZnRlciB9ClBPU1QgL2FwaS9hdXRoL290cC92ZXJpZnkgICAgeyBwaG9uZSwgY29kZSB9ICAgICAg4oaSIHsgYWNjZXNzVG9rZW4sIHJlZnJlc2hUb2tlbiwgdXNlciB9ClBPU1QgL2FwaS9hdXRoL3JlZnJlc2ggICAgICAgeyByZWZyZXNoVG9rZW4gfSAgICAg4oaSIHsgYWNjZXNzVG9rZW4gfQoKR0VUICAvYXBpL2NvbnZlcnNhdGlvbnMgICAgICAgICAgICAgICAgICAgICAgICAgIOKGkiBkYWZ0YXIgY2hhdCArIGxhc3QgbWVzc2FnZSArIHVucmVhZCBjb3VudApQT1NUIC9hcGkvY29udmVyc2F0aW9ucyAgICAgIHsgdHlwZSwgdGl0bGU/LCBtZW1iZXJQaG9uZXNbXSB9CkdFVCAgL2FwaS9jb252ZXJzYXRpb25zLzppZC9tZXNzYWdlcz9iZWZvcmU9PG1zZ0lkPiZsaW1pdD0zMApQT1NUIC9hcGkvbWVkaWEvdXBsb2FkICAgICAgIG11bHRpcGFydChmb3JtLWRhdGEpIOKGkiB7IHVybCwgbWltZSwgc2l6ZSB9CkdFVCAgL2FwaS91c2Vycy9tZQpQVVQgIC9hcGkvdXNlcnMvbWUgICAgICAgICAgIHsgbmFtZSwgYXZhdGFyPyB9ClBPU1QgL2FwaS9kZXZpY2VzICAgICAgICAgICAgeyBmY21Ub2tlbiwgcGxhdGZvcm0gfQpgYGAKClVwbG9hZCBkaWJhdGFzaTogZ2FtYmFyIOKJpCA1IE1CLCBkb2t1bWVuIOKJpCAyMCBNQiwgYXVkaW8g4omkIDEwIE1COyB2YWxpZGFzaQpNSU1FIGRpIHNlcnZlcjsgbmFtYSBmaWxlIGRpYWNhayAoVVVJRCkgYWdhciB0aWRhayBiaXNhIGRpdGViYWsuCgotLS0KCiMjIDcuIFN0cnVrdHVyIFByb3llawoKYGBgCmdlenltdXNlLWNoYXQvCuKUnOKUgOKUgCBpbmRleC5odG1sICAgICAgICAgICAgICAgIyBwcm90b3RpcGUgVUkgKGZyb250ZW5kIHYwKSDigJQgSkFOR0FOIGRpdWJhaCB0YW1waWxhbm55YQrilJzilIDilIAgaW1wbGVtZW50YXRpb25fcGxhbi5tZCAgICMgZG9rdW1lbiBpbmkK4pSc4pSA4pSAIHNlcnZlci8K4pSCICAg4pSc4pSA4pSAIHBhY2thZ2UuanNvbiAgICAgICAgICMgYnVuIGluaXQ7IGRlcHM6IGhvbm8sIG15c3FsMiwgaW9yZWRpcwrilIIgICDilJzilIDilIAgLmVudi5leGFtcGxlICAgICAgICAgIyBEQl9VUkwsIFJFRElTX1VSTCwgSldUX1NFQ1JFVCwgRkNNXyoK4pSCICAg4pSc4pSA4pSAIHNyYy8K4pSCICAg4pSCICAg4pSc4pSA4pSAIGluZGV4LnRzICAgICAgICAgIyBCdW4uc2VydmUgKyBhcHAgSG9ubyArIHVwZ3JhZGUgL3dzCuKUgiAgIOKUgiAgIOKUnOKUgOKUgCB3cy8K4pSCICAg4pSCICAg4pSCICAg4pSc4pSA4pSAIG1hbmFnZXIudHMgICAjIHVzZXJJZCDihpIgU2V0PFdlYlNvY2tldD47IGF1dGg7IGhlYXJ0YmVhdArilIIgICDilIIgICDilIIgICDilJTilIDilIAgaGFuZGxlci50cyAgICMgc3dpdGNoIGV2ZW50IHQ6IG1zZy5zZW5kLCB0eXBpbmcsIC4uLgrilIIgICDilIIgICDilJzilIDilIAgcm91dGVzLwrilIIgICDilIIgICDilIIgICDilJzilIDilIAgYXV0aC50cyAgICAgICMgT1RQICsgSldUCuKUgiAgIOKUgiAgIOKUgiAgIOKUnOKUgOKUgCBjb252ZXJzYXRpb25zLnRzCuKUgiAgIOKUgiAgIOKUgiAgIOKUnOKUgOKUgCBtZXNzYWdlcy50cwrilIIgICDilIIgICDilIIgICDilJTilIDilIAgbWVkaWEudHMgICAgICMgdXBsb2FkCuKUgiAgIOKUgiAgIOKUnOKUgOKUgCBkYi8K4pSCICAg4pSCICAg4pSCICAg4pSc4pSA4pSAIHNjaGVtYS5zcWwgICAjIGJhZ2lhbiA0CuKUgiAgIOKUgiAgIOKUgiAgIOKUlOKUgOKUgCBpbmRleC50cyAgICAgIyBwb29sIG15c3FsMgrilIIgICDilIIgICDilJzilIDilIAgcmVkaXMudHMgICAgICAgICAjIGNsaWVudCBpb3JlZGlzICsgaGVscGVyIHB1Yi9zdWIK4pSCICAg4pSCICAg4pSU4pSA4pSAIGZjbS50cyAgICAgICAgICAgIyBraXJpbSBwdXNoCuKUgiAgIOKUlOKUgOKUgCBEb2NrZXJmaWxlICAgICAgICAgICAjIG9wc2lvbmFsOyBwb2xhIHV0YW1hIHRldGFwIHN5c3RlbWQgKGJhZ2lhbiAxMSkK4pSU4pSA4pSAIHB3YS8gICAgICAgICAgICAgICAgICAgICAjIGZhc2UgNDogbWFuaWZlc3QuanNvbiwgc3cuanMsIGlrb24KYGBgCgoqKlBlcnViYWhhbiBkaSBgaW5kZXguaHRtbGAgc2FhdCBkaXNhbWJ1bmdrYW4ga2UgYmFja2VuZCoqICh0YW1waWxhbiB0ZXRhcCk6CgoxLiBHYW50aSBmdW5nc2kgYGtpcmltUGVzYW4oKWAgZHVtbXkg4oaSIGB3cy5zZW5kKHt0Oidtc2cuc2VuZCcsIC4uLn0pYC4KMi4gR2FudGkgYHNldFRpbWVvdXRgIGJhbGFzYW4gZHVtbXkg4oaSIGB3cy5vbm1lc3NhZ2VgIOKGkiByZW5kZXIgYnViYmxlLgozLiBUYW1iYWggYEF1dGhvcml6YXRpb25gIHNhYXQgZmV0Y2ggcml3YXlhdCArIGBhdXRoYCBwZXJ0YW1hIHNhYXQgV1MgY29ubmVjdC4KNC4gSW5kaWthdG9yIG1lbmdldGlrICYgcHJlc2VuY2UgZGlraXJpbS9kaXRlcmltYSB2aWEgZXZlbnQgV1MgKGJhZ2lhbiA1KS4KCi0tLQoKIyMgOC4gUmVkaXMg4oCUIFVudHVrIEFwYSBTYWphCgp8IEtleSAvIENoYW5uZWwgfCBUaXBlIHwgVFRMIHwgRnVuZ3NpIHwKfC0tLS0tLS0tLS0tLS0tLXwtLS0tLS18LS0tLS18LS0tLS0tLS18CnwgYG90cDo8cGhvbmU+YCB8IHN0cmluZyB8IDMwMCBkdGsgfCBLb2RlIE9UUCA2IGRpZ2l0IHwKfCBgcHJlc2VuY2U6PHVzZXJJZD5gIHwgc3RyaW5nIGAiMSJgIHwgNjAgZHRrIHwgT25saW5lOyBkaS1yZWZyZXNoIGhlYXJ0YmVhdCAzMCBkdGsgfAp8IGByYXRlbGltaXQ6bXNnOjx1c2VySWQ+YCB8IGNvdW50ZXIgfCA2MCBkdGsgfCBNYWtzIDYwIHBlc2FuL21lbml0L3VzZXIgfAp8IGByYXRlbGltaXQ6b3RwOjxwaG9uZT5gIHwgY291bnRlciB8IDYwMCBkdGsgfCBNYWtzIDUgT1RQLzEwIG1udC9ub21vciB8CnwgYGNoYXQ6Y29udjo8Y29udklkPmAgfCBwdWIvc3ViIHwg4oCUIHwgRmFuLW91dCBgbXNnLm5ld2AvYHR5cGluZ2AgYW50YXIgaW5zdGFuY2UgQnVuIHwKfCBgY2hhdDp1c2VyOjx1c2VySWQ+YCB8IHB1Yi9zdWIgfCDigJQgfCBFdmVudCBwZXJzb25hbCAoYG1zZy5zdGF0dXNgLCBgcHJlc2VuY2VgKSB8CgpTZXRpYXAgaW5zdGFuY2UgQnVuIHN1YnNjcmliZSBrZSBjaGFubmVsIHlhbmcgcmVsZXZhbjsgcGVzYW4gZGFyaSBpbnN0YW5jZQpsYWluIGRpdGVydXNrYW4ga2Ugc29ja2V0IGxva2FsbnlhLiBJbmlsYWggeWFuZyBtZW1idWF0IHNjYWxlIGhvcml6b250YWwKdGFucGEgc3RpY2t5LXNlc3Npb24geWFuZyBydW1pdC4KCi0tLQoKIyMgOS4gVGFoYXBhbiBJbXBsZW1lbnRhc2kKCiMjIyBGYXNlIDAg4oCUIEZvbmRhc2kgKMKxMeKAkzIgaGFyaSkKLSBbIF0gYHNlcnZlci9gIEJ1biArIEhvbm8gamFsYW47IGBHRVQgL2AgbWVueWFqaWthbiBgaW5kZXguaHRtbGAuCi0gWyBdIGBzY2hlbWEuc3FsYCAoYmFnaWFuIDQpIGRpZWtzZWt1c2k7IGtvbmVrc2kgcG9vbCBNYXJpYURCIG9rLgotIFsgXSBLb25la3NpIFJlZGlzIG9rOyBgZG9ja2VyLWNvbXBvc2UueW1sYCBsb2thbCAobWFyaWFkYiArIHJlZGlzKSB1bnR1ayBkZXYuCi0gWyBdIGAuZW52LmV4YW1wbGVgOyBSRUFETUUgY2FyYSBqYWxhbiBsb2thbC4KCiMjIyBGYXNlIDEg4oCUIEF1dGggKMKxMuKAkzMgaGFyaSkKLSBbIF0gYFBPU1QgL2FwaS9hdXRoL290cC9yZXF1ZXN0YCArIGB2ZXJpZnlgIChPVFAgZHVtbXkgYDEyMzQ1NmAgZGkgZGV2LAogICAgICBTTVMvV0EgZ2F0ZXdheSBkaSBwcm9kdWtzaSkuCi0gWyBdIEpXVCBhY2Nlc3MgKDE1IG1udCkgKyByZWZyZXNoICgzMCBoYXJpKS4KLSBbIF0gV1MgYC93c2AgbWVub2xhayBrb25la3NpIHRhbnBhIGBhdXRoYCBkYWxhbSA1IGRldGlrLgoKIyMjIEZhc2UgMiDigJQgSW50aSBjaGF0IDEtb24tMSAowrExIG1pbmdndSkg4oaQICoqamFudHVuZyBNVlAqKgotIFsgXSBgbXNnLnNlbmRgIOKGkiBzaW1wYW4gREIg4oaSIGBtc2cuYWNrYCDihpIgZmFuLW91dCBgbXNnLm5ld2AuCi0gWyBdIGBtc2cuc3RhdHVzYDogZGVsaXZlcmVkIChzYW1wYWkgZGkgV1MpICYgcmVhZCAodmlhIGBtc2cucmVhZGApLgotIFsgXSBgR0VUIC9tZXNzYWdlc2AgcGFnaW5hdGlvbjsgZGFmdGFyIHBlcmNha2FwYW4gKyB1bnJlYWQgY291bnQuCi0gWyBdIEZyb250ZW5kIGBpbmRleC5odG1sYCBkaXNhbWJ1bmdrYW4gKDQgcGVydWJhaGFuIGRpIGJhZ2lhbiA3KS4KCiMjIyBGYXNlIDMg4oCUIEdydXAgKyBrZWhhZGlyYW4gKMKxNOKAkzUgaGFyaSkKLSBbIF0gR3J1cDogYnVhdCwgdGFtYmFoIGFuZ2dvdGEsIGBjb252ZXJzYXRpb25fbWVtYmVyc2AuCi0gWyBdIGB0eXBpbmdgICsgYHByZXNlbmNlYCAoaGVhcnRiZWF0IFJlZGlzKS4KLSBbIF0gUmVwbHkgKGByZXBseV90b19pZGApIOKAlCBVSS1ueWEgc3VkYWggYWRhIGRpIHByb3RvdGlwZS4KCiMjIyBGYXNlIDQg4oCUIE1lZGlhICsgcHVzaCArIFBXQSAowrExIG1pbmdndSkKLSBbIF0gVXBsb2FkIGdhbWJhci9kb2t1bWVuL3ZvaWNlIG5vdGUgKGJhZ2lhbiA2KTsgcmVuZGVyIGRpIGJ1YmJsZS4KLSBbIF0gRkNNOiBgZGV2aWNlc2AsIGtpcmltIHB1c2ggc2FhdCBwZW5lcmltYSBvZmZsaW5lL2JhY2tncm91bmQuCi0gWyBdIGBtYW5pZmVzdC5qc29uYCArIGBzdy5qc2A6IGluc3RhbGFzaSArIGFudHJpYW4gb2ZmbGluZQogICAgICAocGVzYW4gZ2FnYWwga2lyaW0gdGVyc2ltcGFuIGRpIEluZGV4ZWREQiwgdGVya2lyaW0gb3RvbWF0aXMpLgoKIyMjIEZhc2UgNSDigJQgSGFyZGVuaW5nICYgZGVwbG95ICjCsTPigJM0IGhhcmkpCi0gWyBdIFJhdGUgbGltaXQgKGJhZ2lhbiA4KTsgdmFsaWRhc2kgc2VtdWEgaW5wdXQgKHpvZCkuCi0gWyBdIFVqaSAyIEhQIEFuZHJvaWQgbnlhdGE6IGtpcmltLCBvZmZsaW5l4oaSb25saW5lLCBiYWNrZ3JvdW5k4oaScHVzaC4KLSBbIF0gRGVwbG95IFZQUzogc3lzdGVtZCB1bml0LCBuZ2lueCByZXZlcnNlIHByb3h5ICsgY2VydGJvdCAoV1NTKSwKICAgICAgTWFyaWFEQiAmIFJlZGlzIGRpIFZQUyB5YW5nIHNhbWEuCi0gWyBdIDAgY29uc29sZSBlcnJvciBkaSBmcm9udGVuZDsgbG9nIHNlcnZlciByYXBpIChwaW5vKS4KCioqRXN0aW1hc2kgdG90YWw6IDPigJM1IG1pbmdndSoqIChwYXJ1aCB3YWt0dSwgc2F0dSBvcmFuZykuCgotLS0KCiMjIDEwLiBEZWZpbml0aW9uIG9mIERvbmUg4oCUIE1WUCBEaW55YXRha2FuIFNlbGVzYWkgSmlrYToKCi0gWyBdIER1YSBha3VuICgyIG5vbW9yIEhQKSBiaXNhIE9UUC1sb2dpbiBkYW4gc2FsaW5nIGNoYXQgdGVrcyA8IDEgZGV0aWsgKFdpRmkpLgotIFsgXSBTdGF0dXMgcGVzYW4gYmVyZ2VyYWsgcGVudWg6IOKckyDihpIg4pyT4pyTIOKGkiDinJPinJMgYmlydSBkaSBrZWR1YSBzaXNpLgotIFsgXSBHcnVwIDUgb3Jhbmc6IHNlbXVhIG1lbmVyaW1hIHBlc2FuICsgaW5kaWthdG9yIG1lbmdldGlrIG11bmN1bC4KLSBbIF0gS2lyaW0gZm90bywgZG9rdW1lbiBQREYsIGRhbiB2b2ljZSBub3RlIGJpc2EgZGlidWthIGRpIHBlbmVyaW1hLgotIFsgXSBQZXNhbiBkaWtpcmltIHNhYXQgb2ZmbGluZSDihpIgdGVya2lyaW0gb3RvbWF0aXMgc2FhdCBvbmxpbmUgKHRhbnBhIGtpcmltIHVsYW5nIG1hbnVhbCkuCi0gWyBdIFBlbmVyaW1hIHlhbmcgYXBsaWthc2lueWEgZGktYmFja2dyb3VuZCBtZW5lcmltYSBwdXNoIEZDTS4KLSBbIF0gUml3YXlhdCA1MDAgcGVzYW46IHNjcm9sbCArICJtdWF0IGxhbWEiIGxhbmNhciBkaSBIUCBrZW50YW5nLgotIFsgXSBUaWRhayBhZGEgcGVzYW4gaGlsYW5nL2dhbmRhIHNldGVsYWggcHV0dXMtc2FtYnVuZyAxMHggKHVqaSByZWNvbm5lY3QpLgotIFsgXSBCZXJqYWxhbiAyNCBqYW0gZGkgVlBTIHRhbnBhIHJlc3RhcnQgZGFydXJhdC4KCi0tLQoKIyMgMTEuIERlcGxveSAoVlBTIOKAlCBwb2xhIEdlenlGb3JtKQoKYGBgCiMgL2V0Yy9zeXN0ZW1kL3N5c3RlbS9nZXp5Y2hhdC5zZXJ2aWNlCltTZXJ2aWNlXQpFeGVjU3RhcnQ9L3Jvb3QvLmJ1bi9iaW4vYnVuIHJ1biBzcmMvaW5kZXgudHMKV29ya2luZ0RpcmVjdG9yeT0vb3B0L2dlenljaGF0L3NlcnZlcgpFbnZpcm9ubWVudEZpbGU9L29wdC9nZXp5Y2hhdC9zZXJ2ZXIvLmVudgpSZXN0YXJ0PWFsd2F5cwpgYGAKCi0gbmdpbng6IGBsb2NhdGlvbiAvYCDihpIgcHJveHkga2UgYDEyNy4wLjAuMTozMDI0YDsgYGxvY2F0aW9uIC93c2Ag4oaSIHByb3h5CiAgZGVuZ2FuIGhlYWRlciBgVXBncmFkZWAvYENvbm5lY3Rpb25gIHVudHVrIFdlYlNvY2tldDsgVExTIHZpYSBjZXJ0Ym90LgotIE1hcmlhREIgKyBSZWRpcyBkaSBWUFMgeWFuZyBzYW1hIChjdWt1cCB1bnR1ayByYXR1c2FuIHVzZXIga29ua3VyZW4pLgotIEJhY2t1cDogYG1hcmlhZGItZHVtcGAgaGFyaWFuICsgY3JvbjsgbWVkaWEgZGktYmFja3VwIHZpYSByc3luYy4KCi0tLQoKIyMgMTIuIERpdHVuZGEgU2FtcGFpIFNldGVsYWggTVZQCgoxLiAqKkUyRUUqKiAoU2lnbmFsIFByb3RvY29sIC8gbGlic2lnbmFsKSDigJQgYnV0dWggbWFuYWplbWVuIGt1bmNpIHBlcgogICBwZXJhbmdrYXQ7IHByb3llayB0ZXJzZW5kaXJpLgoyLiBQYW5nZ2lsYW4gc3VhcmEvdmlkZW8gKFdlYlJUQyArIFNGVSBzZXBlcnRpIExpdmVLaXQpLgozLiBNdWx0aS1kZXZpY2UgcGVudWggKHNhdHUgYWt1biBkaSAyIEhQIHNpbmtyb24pLgo0LiBDaGFubmVsL2Jyb2FkY2FzdCAmIGdydXAgPiA1MDAgYW5nZ290YS4KNS4gRW5rcmlwc2kgbWVkaWEgYXQtcmVzdCBkZW5nYW4gS01TOyByZXRlbnNpICYgaGFwdXMgb3RvbWF0aXMuCjYuIFZlcnNpIGlPUyBuYXRpdmUgLyBkZXNrdG9wIChFbGVjdHJvbi9UYXVyaSkuCgotLS0KCiMjIDEzLiBSaXNpa28gJiBNaXRpZ2FzaQoKfCBSaXNpa28gfCBNaXRpZ2FzaSB8CnwtLS0tLS0tLXwtLS0tLS0tLS0tfAp8IFdTIHB1dHVzLXB1dHVzIGRpIGphcmluZ2FuIHNlbHVsZXIgfCBIZWFydGJlYXQgMzAgZHRrICsgcmVzdW1lIHZpYSBgbGFzdE1zZ0lkYCAoYmFnaWFuIDUpIHwKfCBGQ00gYnV0dWggcHJvamVjdCBGaXJlYmFzZSArIGBnb29nbGUtc2VydmljZXMuanNvbmAgfCBTaWFwa2FuIHNlamFrIGF3YWwgRmFzZSA0LCBidWthbiBtZXBldCB8CnwgU3BhbS9mbG9vZCBwZXNhbiB8IFJhdGUgbGltaXQgUmVkaXMgc2VqYWsgRmFzZSA1IChiYWdpYW4gOCkgfAp8IE5vbW9yIEhQIG11cmlkL2d1cnUgYmVydWJhaCB8IExvZ2luID0gT1RQIHVsYW5nOyBgcGhvbmVgIHVuaXF1ZSwgaWQgaW50ZXJuYWwgc3RhYmlsIHwKfCBCZWJhbiBEQiBzYWF0IGdydXAgcmFtYWkgfCBJbmRleCBgKGNvbnZlcnNhdGlvbl9pZCwgaWQpYDsgYXJzaXAvcGFnaW5hdGlvbiwgYnVrYW4gbG9hZCBzZW11YSB8CgotLS0KCipUZXJha2hpciBkaXBlcmJhcnVpOiAyMDI2LTEwLTExLiBVSSBwcm90b3RpcGU6IGBpbmRleC5odG1sYCAodGVydmVyaWZpa2FzaQowIGNvbnNvbGUgZXJyb3IsIHJlc3BvbnNpZiBIUCkuKgo=
+# Implementation Plan — GezyChat
+
+Aplikasi percakapan real-time ala WhatsApp/Telegram untuk lingkungan sekolah
+(guru, TU, wali kelas, MGMP). Dokumen ini adalah rencana lengkap dari nol
+sampai MVP.
+
+**Stack yang ditetapkan:** Bun + Hono + WebSocket native + MariaDB + Redis.
+**UI:** `index.html` (prototipe yang sudah ada — tampilan final, tinggal
+disambungkan ke backend).
+
+---
+
+## 1. Visi & Target MVP
+
+**Visi:** satu aplikasi chat milik sendiri — data di server sendiri (VPS),
+tanpa ketergantungan ke platform asing, cukup untuk kebutuhan komunikasi
+sekolah.
+
+**Target MVP (selesai = Bagian 10 terpenuhi):**
+
+- Login dengan nomor HP + kode OTP (ala WhatsApp).
+- Chat 1-on-1 dan grup kecil (maks ~50 anggota).
+- Pesan teks, gambar, dokumen, voice note.
+- Status pesan: terkirim (✓) → diterima (✓✓) → dibaca (✓✓ biru).
+- Indikator "mengetik..." dan status online.
+- Riwayat pesan dengan pagination ("muat pesan lama").
+- Push notification saat aplikasi di-background (FCM).
+- Antrian offline: pesan terkirim otomatis saat sinyal kembali.
+- Berjalan di HP via PWA dan/atau APK bungkus WebView (pola Bimasoft).
+
+**Asumsi kapasitas MVP:**
+
+- 1.000 akun terdaftar.
+- Hingga 1.000 koneksi WebSocket aktif secara bersamaan.
+- Sekitar 30 pengguna aktif mengirim pesan pada periode sibuk.
+- Sistem dirancang untuk puncak awal 30 pesan masuk per detik dan fan-out
+  grup sampai 50 anggota.
+- Target latency pesan p95 di bawah 1 detik pada kondisi jaringan normal.
+- Satu instance Bun pada VPS cukup untuk target ini; scale-out dilakukan
+  setelah metrik nyata menunjukkan kebutuhan.
+
+**Bukan target MVP (ditunda — Bagian 12):** enkripsi end-to-end, panggilan
+suara/video, channel/broadcast besar, sinkron multi-device penuh.
+
+MVP dapat mendaftarkan beberapa perangkat untuk push notification. Status
+chat dan cursor dibaca tetap dihitung per pengguna; sinkronisasi penuh antar
+perangkat ditunda.
+
+---
+
+## 2. Arsitektur
+
+```
+┌─────────────────────┐      HTTPS / WSS      ┌─────────┐
+│  PWA / APK WebView  │ ◄──────────────────► │  nginx  │
+│  (index.html + JS)  │                       │  (TLS)  │
+└─────────────────────┘                       └────┬────┘
+                                                   │
+                                            ┌──────▼──────┐
+                                            │ Bun + Hono  │
+                                            │  • REST API │
+                                            │  • WS /ws   │
+                                            └─┬─┬─┬─┬─────┘
+                                              │ │ │ └─► Storage media
+                                              │ │ │     (disk VPS / R2)
+                                              │ │ └─► Redis
+                                              │ │     (pub/sub, presence,
+                                              │ │      rate-limit, OTP)
+                                              │ └─► MariaDB
+                                              │     (users, percakapan,
+                                              │      pesan)
+                                              └─► FCM (push notification)
+```
+
+- Satu binary Bun melayani REST + WebSocket sekaligus.
+- Untuk target MVP, satu instance Bun melayani trafik aplikasi. Redis tetap
+  dipakai untuk OTP, presence, dan rate limit.
+- Jika nanti perlu scale-out, instance Bun tambahan ditempatkan di belakang
+  nginx. Fan-out antar-instance memakai Redis Pub/Sub, sedangkan MariaDB
+  tetap menjadi sumber kebenaran dan reconnect mengambil data dari database.
+
+---
+
+## 3. Stack Detail
+
+| Lapisan      | Pilihan | Catatan |
+|--------------|---------|---------|
+| Runtime      | **Bun** | Sudah dikuasai; WebSocket native cepat |
+| Framework    | **Hono** | Router REST; jalan di atas `Bun.serve` |
+| Realtime     | **WebSocket native Bun** (`Bun.serve({ websocket })`) | Endpoint `/ws`; Hono untuk upgrade handshake |
+| Database     | **MariaDB 10.11+** | Driver `mysql2/promise` atau Drizzle ORM |
+| Cache/bus    | **Redis 7** | Pub/sub, presence, rate-limit, penyimpanan OTP |
+| Frontend     | `index.html` prototipe (vanilla JS) | Nanti: Tailwind; tetap satu file |
+| PWA          | manifest + service worker | Fase 4; IndexedDB untuk antrian offline |
+| Android      | APK bungkus WebView | Push native memerlukan Firebase Messaging dan bridge ke JavaScript |
+| Push         | FCM HTTP v1/Admin SDK + Web Push | Android dan PWA memakai jalur konfigurasi yang berbeda |
+| Media        | Object storage atau disk privat VPS | URL akses sementara; alternatif: Cloudflare R2 (S3-compatible) |
+| Auth         | OTP via SMS/WA gateway → JWT (HS256) | Access token 15 mnt + refresh token yang dapat dicabut |
+| Deploy       | VPS, systemd + nginx + certbot | Pola yang sama dengan GezyForm |
+| Observability | Pino + endpoint health + metrik dasar | Koneksi WS, latency, error, DB, Redis, disk |
+
+**Keputusan sadar:** tidak memakai Socket.IO (butuh kompatibilitas
+fallback polling — tidak perlu), tidak memakai protokol biner custom
+(MTProto dsb. — kelas raksasa, JSON cukup).
+
+---
+
+## 4. Skema Database (MariaDB)
+
+```sql
+CREATE TABLE users (
+  id            BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  phone         VARCHAR(20)  NOT NULL,              -- +62812xxxx, format E.164
+  name          VARCHAR(100) NOT NULL,
+  role          ENUM('admin','guru','tu','wali_kelas','mgmp','siswa')
+                NOT NULL DEFAULT 'siswa',
+  avatar_url    VARCHAR(255) NULL,
+  created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_users_phone (phone)
+);
+
+CREATE TABLE conversations (
+  id         BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  type       ENUM('direct','group') NOT NULL,
+  title      VARCHAR(120) NULL,                    -- nama grup; NULL utk direct
+  created_by BIGINT UNSIGNED NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE SET NULL
+);
+
+CREATE TABLE direct_conversation_pairs (
+  conversation_id BIGINT UNSIGNED NOT NULL,
+  user_a_id       BIGINT UNSIGNED NOT NULL,
+  user_b_id       BIGINT UNSIGNED NOT NULL,
+  PRIMARY KEY (conversation_id),
+  UNIQUE KEY uq_direct_pair (user_a_id, user_b_id),
+  FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_a_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_b_id) REFERENCES users(id) ON DELETE CASCADE,
+  CHECK (user_a_id < user_b_id)
+);
+
+CREATE TABLE conversation_members (
+  conversation_id   BIGINT UNSIGNED NOT NULL,
+  user_id           BIGINT UNSIGNED NOT NULL,
+  role              ENUM('admin','member') DEFAULT 'member',
+  last_delivered_msg_id BIGINT UNSIGNED NULL,        -- cursor delivered per user
+  last_read_msg_id  BIGINT UNSIGNED NULL,          -- untuk badge & "dibaca"
+  joined_at         TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (conversation_id, user_id),
+  FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  INDEX idx_member_user (user_id, conversation_id)
+);
+
+CREATE TABLE messages (
+  id              BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  conversation_id BIGINT UNSIGNED NOT NULL,
+  sender_id       BIGINT UNSIGNED NOT NULL,
+  client_message_id VARCHAR(64) NOT NULL,            -- stabil saat retry/reconnect
+  kind            ENUM('text','image','file','audio') NOT NULL,
+  body_text       TEXT NULL,                        -- teks / caption
+  media_key       VARCHAR(255) NULL,                 -- object key; bukan URL publik
+  media_mime      VARCHAR(100) NULL,
+  media_size      INT UNSIGNED NULL,
+  reply_to_id     BIGINT UNSIGNED NULL,
+  created_at      TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP(3),
+  FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE,
+  FOREIGN KEY (sender_id) REFERENCES users(id),
+  FOREIGN KEY (reply_to_id) REFERENCES messages(id) ON DELETE SET NULL,
+  UNIQUE KEY uq_msg_sender_client (sender_id, client_message_id),
+  INDEX idx_conv_time (conversation_id, id),        -- pagination cepat
+  INDEX idx_msg_sender (sender_id, id)
+);
+
+CREATE TABLE devices (                              -- untuk push
+  user_id    BIGINT UNSIGNED NOT NULL,
+  device_id  VARCHAR(128) NOT NULL,
+  fcm_token  VARCHAR(255) NOT NULL,
+  platform   ENUM('android','web') NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id, device_id),
+  UNIQUE KEY uq_devices_fcm_token (fcm_token),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE refresh_tokens (
+  id         BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id    BIGINT UNSIGNED NOT NULL,
+  device_id  VARCHAR(128) NULL,
+  token_hash CHAR(64) NOT NULL,
+  expires_at DATETIME NOT NULL,
+  revoked_at DATETIME NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_refresh_token_hash (token_hash),
+  INDEX idx_refresh_user (user_id, revoked_at, expires_at),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
+
+OTP **tidak** disimpan di MariaDB — cukup di Redis dengan TTL 5 menit
+(bagian 8). Access token JWT tetap stateless, tetapi refresh token disimpan
+sebagai hash agar dapat dicabut per perangkat.
+
+`last_delivered_msg_id` dan `last_read_msg_id` adalah cursor per anggota.
+Server hanya boleh memajukan cursor, dan harus memastikan pesan tersebut
+berasal dari percakapan yang sama. Batas maksimal 50 anggota grup, pasangan
+direct yang unik, serta kecocokan `kind` dengan `body_text`/`media_key`
+divalidasi dalam transaksi aplikasi.
+
+---
+
+## 5. Protokol WebSocket (JSON)
+
+Satu koneksi per perangkat ke `wss://<host>/ws`. Token dikirim pada event
+`auth`, bukan pada query string. Envelope selalu:
+
+```jsonc
+{ "t": "<event>", "d": { /* payload */ }, "reqId": "uuid-opsional" }
+```
+
+`reqId` hanya berada di envelope dan harus tetap sama ketika client mengulang
+permintaan. Server memvalidasi ukuran frame, bentuk payload, dan event yang
+diizinkan setelah autentikasi.
+
+**Client → Server**
+
+| Event | Payload | Fungsi |
+|-------|---------|--------|
+| `auth` | `{ "token": "<JWT>" }` | Wajib pertama; tanpa ini koneksi ditutup |
+| `msg.send` | `{ "convId": 12, "clientMessageId": "uuid", "kind": "text", "body": "halo", "replyTo": null }` | Kirim pesan; `reqId` envelope untuk ack/idempotency |
+| `msg.read` | `{ "convId": 12, "lastMsgId": 345 }` | Tandai dibaca → update `last_read_msg_id` |
+| `typing` | `{ "convId": 12, "state": true }` | Mulai/berhenti mengetik |
+| `sync` | `{ "cursors": [{ "convId": 12, "lastMsgId": 345 }] }` | Ambil pesan yang terlewat setelah reconnect |
+| `ping` | `{}` | Heartbeat tiap 30 dtk (jawaban `pong`) |
+
+**Server → Client**
+
+| Event | Payload | Fungsi |
+|-------|---------|--------|
+| `msg.new` | `{ "msg": { id, convId, senderId, kind, body, mediaUrl, createdAt } }` | Pesan masuk → render bubble |
+| `msg.ack` | `{ "reqId": "abc", "msgId": 346, "status": "sent" }` | Optimistic UI: ✓ satu |
+| `msg.status` | `{ "msgId": 346, "convId": 12, "status": "delivered"/"read", "byUserId": 7 }` | ✓✓ / ✓✓ biru |
+| `sync.done` | `{ "messages": [], "cursors": [] }` | Menandai sinkronisasi reconnect selesai |
+| `typing` | `{ "convId": 12, "userId": 7, "name": "Bu Sari", "state": true }` | Indikator mengetik |
+| `presence` | `{ "userId": 7, "online": true }` | Status online/offline |
+| `error` | `{ "reqId": "abc", "code": "FORBIDDEN", "message": "..." }` | Error terstruktur untuk client |
+| `pong` | `{}` | Jawaban heartbeat |
+
+**Aturan penting:**
+
+- Server selalu simpan ke MariaDB **dulu**, baru fan-out. Tidak ada pesan
+  yang "hanya di memori".
+- `msg.ack` dikirim setelah transaksi MariaDB berhasil commit. `clientMessageId`
+  harus unik per pengirim; retry dengan ID yang sama mengembalikan pesan lama
+  tanpa membuat pesan baru.
+- `delivered` = pesan sudah sampai ke WS penerima yang online. Jika penerima
+  offline → tetap `sent`, lalu server mengirim push FCM. Cursor delivered
+  diperbarui ketika event berhasil diteruskan ke koneksi penerima.
+- `read` hanya ditetapkan setelah client mengirim `msg.read`; server tidak
+  boleh menganggap pesan terbaca hanya karena pesan sudah delivered.
+- Setelah reconnect dan `auth`, client mengirim `sync` dengan `lastMsgId` per
+  percakapan. Server mengambil data dari MariaDB dan mengirim pesan yang
+  terlewat, sehingga Redis atau WebSocket yang sempat putus tidak menyebabkan
+  pesan hilang.
+- Semua event memeriksa autentikasi dan keanggotaan percakapan. Client tidak
+  boleh menentukan `senderId`, status pesan, atau URL media.
+- Heartbeat server dan client berjalan setiap 30 detik; koneksi tanpa auth
+  dalam 5 detik dan koneksi yang tidak merespons heartbeat ditutup.
+
+---
+
+## 6. REST API (Hono)
+
+Semua di bawah `/api`, auth via `Authorization: Bearer <JWT>`
+(kecuali dua endpoint OTP pertama).
+
+```
+POST /api/auth/otp/request   { phone }            → { ok, retryAfter }
+POST /api/auth/otp/verify    { phone, code }      → { accessToken, refreshToken, user }
+POST /api/auth/refresh       { refreshToken, deviceId? } → { accessToken, refreshToken? }
+POST /api/auth/logout        { refreshToken? }    → { ok }
+
+GET  /api/conversations                          → daftar chat + last message + unread count
+POST /api/conversations      { type, title?, memberPhones[] }
+POST /api/conversations/:id/members { userId }    → tambah anggota grup
+GET  /api/conversations/:id/messages?before=<msgId>&limit=30
+POST /api/media/upload       multipart(form-data) → { url, mime, size }
+GET  /api/users/me
+PUT  /api/users/me           { name, avatar? }
+POST /api/devices            { deviceId, fcmToken, platform }
+```
+
+Upload dibatasi: gambar ≤ 5 MB, dokumen ≤ 20 MB, audio ≤ 10 MB; validasi
+MIME berdasarkan isi file di server; nama file diacak (UUID) agar tidak bisa
+ditebak. File disimpan di luar direktori publik. `media_url` yang dikirim ke
+client adalah URL sementara atau endpoint yang memeriksa keanggotaan
+percakapan, bukan URL file permanen.
+
+Semua endpoint selain request/verify OTP memeriksa JWT, hak akses pengguna,
+dan batas input. Pagination membatasi `limit` maksimum 100. Rate limit
+diterapkan berdasarkan nomor HP, alamat IP, pengguna, dan endpoint untuk
+mencegah penyalahgunaan OTP, pesan, dan upload.
+
+---
+
+## 7. Struktur Proyek
+
+```
+gezymuse-chat/
+├── index.html               # prototipe UI (frontend v0) — JANGAN diubah tampilannya
+├── implementation_plan.md   # dokumen ini
+├── server/
+│   ├── package.json         # bun init; deps: hono, mysql2, ioredis
+│   ├── .env.example         # DB_URL, REDIS_URL, JWT_SECRET, FCM_*
+│   ├── src/
+│   │   ├── index.ts         # Bun.serve + app Hono + upgrade /ws
+│   │   ├── health.ts         # readiness/liveness dan pemeriksaan dependensi
+│   │   ├── validation.ts     # validasi payload REST dan WebSocket
+│   │   ├── ws/
+│   │   │   ├── manager.ts   # userId → Set<WebSocket>; auth; heartbeat
+│   │   │   └── handler.ts   # switch event t: msg.send, typing, ...
+│   │   ├── routes/
+│   │   │   ├── auth.ts      # OTP + JWT
+│   │   │   ├── conversations.ts
+│   │   │   ├── messages.ts
+│   │   │   └── media.ts     # upload
+│   │   ├── db/
+│   │   │   ├── migrations/   # migrasi berurutan, bukan schema manual saja
+│   │   │   │   └── 001_initial.sql
+│   │   │   └── index.ts     # pool mysql2
+│   │   ├── redis.ts         # client ioredis + helper pub/sub
+│   │   ├── storage.ts        # media privat dan signed URL
+│   │   ├── fcm.ts            # push Android; memakai FCM HTTP v1/Admin SDK
+│   │   └── metrics.ts        # metrik dasar dan request/correlation ID
+│   └── Dockerfile           # opsional; pola utama tetap systemd (bagian 11)
+└── pwa/                     # fase 4: manifest.json, sw.js, ikon, IndexedDB
+```
+
+**Perubahan di `index.html` saat disambungkan ke backend** (tampilan tetap):
+
+1. Ganti fungsi `kirimPesan()` dummy → `ws.send({t:'msg.send', ...})` dengan
+   `clientMessageId` yang disimpan di IndexedDB.
+2. Ganti `setTimeout` balasan dummy → `ws.onmessage` → render bubble.
+3. Tambah `Authorization` saat fetch riwayat + `auth` pertama saat WS connect.
+4. Indikator mengetik & presence dikirim/diterima via event WS (bagian 5).
+5. Saat reconnect, kirim cursor `lastMsgId` melalui event `sync` dan retry
+   pesan berstatus `pending`/`sending` dengan ID client yang sama.
+
+---
+
+## 8. Redis — Untuk Apa Saja
+
+| Key / Channel | Tipe | TTL | Fungsi |
+|---------------|------|-----|--------|
+| `otp:<phone>` | string | 300 dtk | Kode OTP 6 digit |
+| `presence:<userId>` | string `"1"` | 60 dtk | Online; di-refresh heartbeat 30 dtk |
+| `ratelimit:msg:<userId>` | counter | 60 dtk | Maks 60 pesan/menit/user |
+| `ratelimit:otp:<phone>` | counter | 600 dtk | Maks 5 OTP/10 mnt/nomor |
+| `ratelimit:otp:ip:<ip>` | counter | 600 dtk | Batas OTP per alamat IP |
+| `chat:events` | pub/sub | — | Event lintas instance untuk `msg.new`, typing, status |
+| `chat:user:<userId>` | pub/sub | — | Event personal jika routing khusus diperlukan |
+
+Pada satu instance, fan-out dilakukan langsung ke socket lokal. Saat
+scale-out, setiap instance cukup subscribe ke channel bersama `chat:events`
+dan meneruskan event ke socket lokal yang relevan; jangan membuat satu
+subscription Redis untuk setiap percakapan aktif.
+
+Redis Pub/Sub bersifat sementara dan bukan antrean durable. MariaDB tetap
+menjadi sumber kebenaran. Jika event lintas instance terlewat, event tersebut
+akan ditemukan melalui `sync` saat reconnect. Jika kebutuhan delivery lintas
+instance meningkat, tambahkan outbox table/worker atau Redis Streams.
+
+---
+
+## 9. Tahapan Implementasi
+
+### Fase 0 — Fondasi (±1–2 hari)
+- [ ] `server/` Bun + Hono jalan; `GET /` menyajikan `index.html`.
+- [ ] Migrasi database awal (bagian 4) dijalankan; koneksi pool MariaDB ok.
+- [ ] Koneksi Redis ok; `docker-compose.yml` lokal (mariadb + redis) untuk dev.
+- [ ] `.env.example`; README cara jalan lokal.
+- [ ] Endpoint health/readiness dan structured logging dengan correlation ID.
+- [ ] Konfigurasi batas ukuran request, frame WebSocket, dan koneksi database.
+
+### Fase 1 — Auth (±2–3 hari)
+- [ ] `POST /api/auth/otp/request` + `verify` (OTP dummy `123456` di dev,
+      SMS/WA gateway di produksi).
+- [ ] OTP tidak membocorkan apakah nomor terdaftar; rate limit per nomor dan IP.
+- [ ] JWT access (15 mnt) + refresh (30 hari) yang tersimpan sebagai hash dan
+      dapat dicabut per perangkat.
+- [ ] Otorisasi dasar dan validasi input untuk semua endpoint yang sudah ada.
+- [ ] WS `/ws` menolak koneksi tanpa `auth` dalam 5 detik dan memeriksa origin.
+
+### Fase 2 — Inti chat 1-on-1 (±1 minggu) ← **jantung MVP**
+- [ ] `msg.send` → transaksi DB → `msg.ack` → fan-out `msg.new`.
+- [ ] Idempotency dengan `clientMessageId`; retry tidak membuat pesan ganda.
+- [ ] `msg.status`: delivered (sampai di WS) & read (via `msg.read`) memakai
+      cursor per anggota.
+- [ ] `GET /messages` pagination; daftar percakapan + unread count.
+- [ ] Event `sync` setelah reconnect berdasarkan `lastMsgId` per percakapan.
+- [ ] Frontend `index.html` disambungkan (5 perubahan di bagian 7).
+
+### Fase 3 — Grup + kehadiran (±4–5 hari)
+- [ ] Grup: buat, tambah anggota, `conversation_members`, maksimum 50 anggota.
+- [ ] Direct conversation memakai pasangan pengguna unik agar tidak duplikat.
+- [ ] `typing` + `presence` (heartbeat Redis).
+- [ ] Reply (`reply_to_id`) — UI-nya sudah ada di prototipe.
+
+### Fase 4 — Media + push + PWA (±1 minggu)
+- [ ] Upload gambar/dokumen/voice note (bagian 6); render di bubble dengan
+      URL sementara dan pemeriksaan akses.
+- [ ] FCM HTTP v1/Admin SDK untuk Android dan Web Push/VAPID untuk PWA.
+- [ ] APK WebView memakai Firebase Messaging native dan bridge jika push
+      harus tetap berjalan saat WebView di-background.
+- [ ] `manifest.json` + `sw.js`: instalasi + antrian offline
+      (pesan gagal kirim tersimpan di IndexedDB, terkirim otomatis).
+
+### Fase 5 — Hardening & deploy (±3–4 hari)
+- [ ] Rate limit lanjutan, validasi semua input (zod), CSP, dan sanitasi output
+      pesan untuk mencegah XSS.
+- [ ] Uji 2 HP Android nyata: kirim, offline→online, background→push.
+- [ ] Uji 1.000 koneksi WebSocket, 30 pengirim aktif, puncak 30 pesan/detik,
+      dan grup 50 anggota.
+- [ ] Uji retry, reconnect serentak, pesan ganda, akses percakapan ilegal,
+      akses media ilegal, serta pencabutan refresh token.
+- [ ] Deploy VPS: systemd unit, nginx reverse proxy + certbot (WSS),
+      MariaDB & Redis di VPS yang sama.
+- [ ] Backup database dan media; uji restore; metrik dasar dan alert disk/DB.
+- [ ] 0 console error di frontend; log server rapi (pino).
+
+**Estimasi total: 4–6 minggu** (paruh waktu, satu orang).
+
+---
+
+## 10. Definition of Done — MVP Dinyatakan Selesai Jika:
+
+- [ ] Dua akun (2 nomor HP) bisa OTP-login dan saling chat teks < 1 detik (WiFi).
+- [ ] Status pesan bergerak penuh: ✓ → ✓✓ → ✓✓ biru di kedua sisi.
+- [ ] Grup 50 orang: anggota yang berhak menerima pesan + indikator mengetik
+      muncul tanpa duplikasi.
+- [ ] Kirim foto, dokumen PDF, dan voice note bisa dibuka di penerima.
+- [ ] Pesan dikirim saat offline → terkirim otomatis saat online (tanpa kirim ulang manual).
+- [ ] Penerima yang aplikasinya di-background menerima push FCM.
+- [ ] Riwayat 500 pesan: scroll + "muat lama" lancar di HP kentang.
+- [ ] Tidak ada pesan hilang/ganda setelah putus-sambung 10x (uji reconnect).
+- [ ] Retry request dengan `clientMessageId` yang sama tidak membuat pesan ganda.
+- [ ] Pengguna tidak dapat membaca atau mengirim pesan ke percakapan yang
+      bukan anggotanya.
+- [ ] URL media tanpa hak akses tidak dapat dibuka.
+- [ ] 1.000 koneksi WebSocket dan 30 pengirim aktif memenuhi target p95
+      latency < 1 detik pada uji beban.
+- [ ] Refresh token dapat dicabut; OTP dan upload menolak percobaan berlebihan.
+- [ ] Backup database/media berhasil dipulihkan pada lingkungan uji.
+- [ ] Berjalan 24 jam di VPS tanpa restart darurat.
+
+---
+
+## 11. Deploy (VPS — pola GezyForm)
+
+```
+# /etc/systemd/system/gezychat.service
+[Unit]
+Description=GezyChat server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/gezychat/server
+EnvironmentFile=/opt/gezychat/server/.env
+User=gezychat
+Group=gezychat
+ExecStart=/usr/local/bin/bun run src/index.ts
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+LimitNOFILE=8192
+
+[Install]
+WantedBy=multi-user.target
+```
+
+- nginx: `location /` → proxy ke `127.0.0.1:3024`; `location /ws` → proxy
+  dengan header `Upgrade`/`Connection`, `proxy_read_timeout` yang cukup untuk
+  WS, dan `client_max_body_size` sekitar 25 MB; TLS via certbot.
+- Jalankan MariaDB dan Redis sebagai service terpisah; port database hanya
+  listen di localhost/private network dan tidak dibuka ke internet.
+- Ukuran awal: 2 vCPU, RAM 4 GB, SSD 40–80 GB. Naikkan kapasitas setelah
+  metrik CPU, RAM, koneksi DB, latency, dan disk menunjukkan kebutuhan.
+- Kredensial FCM server disimpan sebagai secret di server. `google-services.json`
+  hanya untuk aplikasi Android, bukan kredensial pengiriman dari backend.
+- Backup: `mariadb-dump` harian dan backup media ke lokasi terpisah; lakukan
+  uji restore berkala, bukan hanya membuat file backup.
+
+---
+
+## 12. Ditunda Sampai Setelah MVP
+
+1. **E2EE** (Signal Protocol / libsignal) — butuh manajemen kunci per
+   perangkat; proyek tersendiri.
+2. Panggilan suara/video (WebRTC + SFU seperti LiveKit).
+3. Multi-device penuh (satu akun di 2 HP sinkron).
+4. Channel/broadcast & grup > 500 anggota.
+5. Enkripsi media at-rest dengan KMS; retensi & hapus otomatis.
+6. Versi iOS native / desktop (Electron/Tauri).
+
+---
+
+## 13. Risiko & Mitigasi
+
+| Risiko | Mitigasi |
+|--------|----------|
+| WS putus-putus di jaringan seluler | Heartbeat 30 dtk + `sync` via `lastMsgId` (bagian 5) |
+| Redis Pub/Sub kehilangan event sementara | MariaDB sebagai sumber kebenaran; reconnect melakukan `sync`; outbox/Streams saat scale-out besar |
+| Push Android/WebView tidak konsisten | FCM native untuk APK, Web Push/VAPID untuk PWA; uji perangkat nyata sejak Fase 4 |
+| FCM butuh kredensial server dan konfigurasi client | FCM HTTP v1/Admin SDK di backend; `google-services.json` hanya di client Android |
+| Spam/flood OTP, pesan, atau upload | Rate limit Redis per IP/nomor/user/endpoint sejak Fase 1 |
+| Pesan ganda saat retry | `clientMessageId` + unique key `(sender_id, client_message_id)` |
+| Akses pesan/media oleh pengguna yang tidak berhak | Otorisasi pada setiap REST/WS event dan signed URL/media endpoint |
+| Nomor HP murid/guru berubah | Login = OTP ulang; `phone` unique, id internal stabil |
+| Beban DB saat grup ramai | Index `(conversation_id, id)` dan `(user_id, conversation_id)`; pagination, bukan load semua |
+| Backup ada tetapi tidak dapat dipulihkan | Uji restore database dan media secara berkala |
+
+---
+
+*Terakhir diperbarui: 2026-10-11. UI prototipe: `index.html` (terverifikasi
+0 console error, responsif HP).*
